@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar Bakez</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFECEC;
+            color: #000;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #F8CBCB;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* Header */
+        /* Header */
+        nav {
+            background-color: #E1B7B7;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu li {
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #f5c6cb;
+            color: black;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            border-radius: 5px;
+        }
+
+        /* Mobile Menu */
+        .menu.mobile {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-color: #E1B7B7;
+            padding: 15px 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu.mobile li {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .menu {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .menu.mobile.active {
+                display: flex;
+            }
+        }
+
+        .container {
+    max-width: 800px;
+    margin: 20px auto; /* Add vertical margin to create space */
+    background-color: #FFF5F5;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+        h1 {
+            color: #000;
+            margin-bottom: 1rem;
+        }
+
+        /* Specific styling for the list in the container */
+        .container ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .container ul li {
+            margin-bottom: 1rem;
+        }
+
+        .container ul li::before {
+            content: '\1F6D1';
+            margin-right: 10px;
+        }
+
+        .container ul li:nth-child(2)::before {
+            content: '\1F4C5';
+        }
+
+        .container ul li:nth-child(3)::before {
+            content: '\1F4B8';
+        }
+
+        .whatsapp-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.qr-code {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    margin-bottom: 0.5rem; /* Reduced space */
+}
+
+.whatsapp-qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Reduced gap */
+    padding: 1rem;
+    background-color: #FFECEC;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.whatsapp-number {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+        footer {
+            text-align: center;
+            background-color: #E1B7B7;
+            color: black;
+            padding: 1rem;
+        }
+
+        footer a {
+            color: #c93f6f;
+            text-decoration: none;
+        }
+
+         /* Responsive Design */
+         @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .container ul {
+                text-align: center;
+            }
+
+            .whatsapp-number {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                gap: 10px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+                padding: 8px 10px;
+            }
+
+            .container {
+                padding: 0.8rem;
+            }
+
+            .qr-code {
+                max-width: 300px;
+                max-height: 300px;
+            }
+
+            .whatsapp-number {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav>
+        <a href="/home.html" class="logo">Sugar Bakez</a>
+        <ul class="menu">
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/sweettreats.html">Brownies</a></li>
+            <li><a href="/cakes.html">Cakes</a></li>
+            <li><a href="/cookies.html">Cookies</a></li>
+            <li><a href="/lemonloaves.html">Lemon Loaves</a></li>
+            <li><a href="/sweetevents.html">Sweet Events</a></li>
+            <li><a href="/order.html">Order and Inquire</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu mobile">
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/sweettreats.html">Brownies</a></li>
+            <li><a href="/cakes.html">Cakes</a></li>
+            <li><a href="/cookies.html">Cookies</a></li>
+            <li><a href="/lemonloaves.html">Lemon Loaves</a></li>
+            <li><a href="/sweetevents.html">Sweet Events</a></li>
+            <li><a href="/order.html">Order and Inquire</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Orders and Deliveries</h2>
+        <ul>
+            <li>Delivery unavailable – Only pick-up from Lansdowne, Cape Town.</li>
+            <li>Please place orders at least 3 days in advance to ensure freshness and availability.</li>
+            <li>A 50% deposit is required for all orders over R300.</li>
+        </ul>
+        <p>Thank you for your understanding and support! <span>&#128150;</span></p>
+    
+        <div class="whatsapp-container">
+            <h3>Contact Us on WhatsApp</h3>
+            <div class="whatsapp-qr">
+                <img src="Images/qr code.png" alt="WhatsApp QR Code" class="qr-code">
+                <p class="whatsapp-number">WhatsApp: +27 72 234 4510</p>
+            </div>
+        </div>
+    </div>    
+
+    <footer>
+        <p>Made with &#128158; by The Three Stars | Sugar Bakez</p>
+    </footer>
+
+    <script>
+        // Toggle Mobile Menu
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.menu.mobile');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

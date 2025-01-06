@@ -1,0 +1,401 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar Bakez</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            background-color: #fff6f8;
+            color: #4e4e4e;
+        }
+
+        /* Header */
+        /* Header */
+        nav {
+            background-color: #E1B7B7;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu li {
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #f5c6cb;
+            color: black;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            border-radius: 5px;
+        }
+
+        /* Mobile Menu */
+        .menu.mobile {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-color: #E1B7B7;
+            padding: 15px 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu.mobile li {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Mobile View */
+        @media (max-width: 1024px) {
+            .menu {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .menu.mobile.active {
+                display: flex;
+            }
+        }
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-image: url('https://i.ibb.co/W3dzGVh/image52.jpg');
+    background-size: cover;
+    height: 572px;
+    width: 100%;
+    background-position: center;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FEE4E3;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.hero img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    z-index: 2;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        height: auto; /* Let the height adjust according to the content */
+    }
+
+    .hero img {
+        width: 80%; /* Adjust image size for smaller screens */
+        margin: 0 auto;
+        display: block; /* Center the image */
+    }
+}
+
+        /* Sweet Creations Section */
+        .section {
+           padding: 2rem 1rem;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           text-align: center;
+        }
+
+        .section h1 {
+           margin-bottom: 0.3rem;
+           color: #c93f6f;
+        }
+
+        .sweet-creations {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           gap: 1.5rem;
+           flex-wrap: wrap;
+           margin-top: 1rem;
+        }
+
+        .sweet-item {
+           text-align: center;
+           margin-top: 0.1rem;
+        }
+
+        .sweet-item img {
+           width: 229px;
+           height: 218px;
+           border-radius: 50%;
+        }
+        .sweet-item a {
+    text-decoration: none; /* Removes underline from all buttons */
+}
+
+.button-text {
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #c93f6f;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-text:hover {
+    background-color: #a33659;
+    text-decoration: none; /* Ensures no underline on hover */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .sweet-creations {
+        justify-content: space-evenly;
+    }
+
+    .sweet-item {
+        width: 45%; /* Adjust width to ensure two items fit in a row */
+    }
+}
+
+        /* Celebration Section */
+        .celebration {
+            text-align: center;
+            position: relative;
+            padding: 2rem 1rem;
+            background-image: url('https://i.ibb.co/gyQCJ80/image10.jpg');
+            background-size: cover;
+            height: 572px;
+            width: auto;
+            background-position: center;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .celebration::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FEE4E3;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        .celebration h2 {
+            z-index: 2;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .btn {
+            z-index: 2;
+            padding: 0.8rem 2rem;
+            background-color: #c93f6f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #a33659;
+        }
+
+        /* Social Media Section */
+        .social {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .social img {
+            width: 50px;
+            height: 50px;
+            margin: 0 1rem;
+        }
+
+        /* Footer */
+        footer {
+    text-align: center;
+    background-color: #E1B7B7;
+    color: black;
+    padding: 1rem;
+}
+
+footer a {
+    color: #c93f6f;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="/home.html" class="logo">Sugar Bakez</a>
+        <ul class="menu">
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/sweettreats.html">Brownies</a></li>
+            <li><a href="/cakes.html">Cakes</a></li>
+            <li><a href="/cookies.html">Cookies</a></li>
+            <li><a href="/lemonloaves.html">Lemon Loaves</a></li>
+            <li><a href="/sweetevents.html">Sweet Events</a></li>
+            <li><a href="/order.html">Order and Inquire</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu mobile">
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/sweettreats.html">Brownies</a></li>
+            <li><a href="/cakes.html">Cakes</a></li>
+            <li><a href="/cookies.html">Cookies</a></li>
+            <li><a href="/lemonloaves.html">Lemon Loaves</a></li>
+            <li><a href="/sweetevents.html">Sweet Events</a></li>
+            <li><a href="/order.html">Order and Inquire</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="Images/IMG-20250103-WA0007-removebg-preview.png" alt="Sugar Bakez Logo">
+    </section>
+
+    <!-- Sweet Creations Section -->
+    <section class="section sweet-creations">
+        <h1>All our Sweet Creations</h1>
+        <div class="sweet-creations">
+            <div class="sweet-item">
+                <img src="Images/image38.jpg" alt="Brownies">
+                <a href="/sweettreats.html">
+                    <p class="button-text">Brownies</p>
+                </a>
+            </div>
+            <div class="sweet-item">
+                <img src="Images/image33.jpg" alt="Chocolate Cakes">
+                <a href="/cakes.html">
+                    <p class="button-text">Cakes</p>
+                </a>
+            </div>
+            <div class="sweet-item">
+                <img src="Images/image28.jpg" alt="Cookies">
+                <a href="/cookies.html">
+                    <p class="button-text">Cookies</p>
+                </a>
+            </div>
+            <div class="sweet-item">
+                <img src="Images/image30.jpg" alt="Lemon Loafs">
+                <a href="/lemonloaves.html">
+                    <p class="button-text">Lemon Loaves</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="celebration">
+        <h2 style="background-color: #ffccd5;">
+            Sweeten up your celebration!
+        </h2>
+        <a href="/sweetevents.html" class="btn">Learn More</a>
+    </section>   
+
+<!-- Social Media Section -->
+<section class="social">
+    <h2>Sweeten up your feed</h2>
+    <a href="https://www.instagram.com/sugar_bakez/profilecard/?igsh=M3lnOWY4dXAyeWNw" target="_blank"><img src="Images/Pink_Instagram_Logo_White_Transparent__Instagram_Icon_Logo_Pink__Instagram_Icons__Logo_Icons__Pinkicons_PNG_Image_For_Free_Download-removebg-preview.png" alt="Instagram"></a>
+    <a href="https://www.tiktok.com/@sugar_bakez?_r=1&_d=ec1ehdl49f38dh&sec_uid=MS4wLjABAAAALTXRTbBVGTc6AAtpMWHGJ2taeuqIijHmUJBpGMyrzA1HtwNR-gbYxd4oLWzcKfh_&share_author_id=7391614101829714950&sharer_language=en&source=h5_m&u_code=ef6g379lj97c7f&ug_btm=b8727,b0&social_share_type=4&utm_source=copy&sec_user_id=MS4wLjABAAAALTXRTbBVGTc6AAtpMWHGJ2taeuqIijHmUJBpGMyrzA1HtwNR-gbYxd4oLWzcKfh_&tt_from=copy&utm_medium=ios&utm_campaign=client_share&enable_checksum=1&user_id=7391614101829714950&share_link_id=45D36546-5E18-4C63-8B63-7FD492CC9481&share_app_id=1233" target="_blank"><img src="Images/___S2luvy___ícone_tiktok__-removebg-preview.png" alt="TikTok"></a>
+    <a href="https://www.facebook.com/share/1GZoREWsoQ/?mibextid=wwXIfr" target="_blank"><img src="Images/Facebook_app_icon-removebg-preview.png" alt="Facebook"></a>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with &#128158; by The Three Stars | Sugar Bakez</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const mobileMenu = document.querySelector(".menu.mobile");
+
+        hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

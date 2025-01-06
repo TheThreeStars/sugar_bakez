@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sugar Bakez</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+        }
+/* Header */
+/* Header */
+nav {
+            background-color: #E1B7B7;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu li {
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #f5c6cb;
+            color: black;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            border-radius: 5px;
+        }
+
+        /* Mobile Menu */
+        .menu.mobile {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-color: #E1B7B7;
+            padding: 15px 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu.mobile li {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .menu {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .menu.mobile.active {
+                display: flex;
+            }
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .intro img {
+            width: 100%;
+            height: 555px;
+            max-height: 500px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+    .intro img {
+        content: url('Images/About\ Tablet.png'); /* Replace with your tablet-specific image path */
+    }
+}
+
+
+        .intro h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .cta {
+            background-color: #FEE4E3;
+            text-align: center;
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .cta h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: black;
+        }
+
+        .cta .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            color: black;
+        }
+
+        .cta .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cta .button-wrapper img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 2px solid #fff;
+        }
+
+        .cta .buttons a {
+            text-decoration: none;
+            background-color: #f7a1c4;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        .cta .buttons a:hover {
+            background-color: #e98cab;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #E1B7B7;
+            color: black !important;
+            padding: 1rem;
+        }
+
+        footer a {
+            color: #c93f6f;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="/home.html" class="logo">Sugar Bakez</a>
+        <ul class="menu">
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/sweettreats.html">Brownies</a></li>
+            <li><a href="/cakes.html">Cakes</a></li>
+            <li><a href="/cookies.html">Cookies</a></li>
+            <li><a href="/lemonloaves.html">Lemon Loaves</a></li>
+            <li><a href="/sweetevents.html">Sweet Events</a></li>
+            <li><a href="/order.html">Order and Inquire</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu mobile">
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/sweettreats.html">Brownies</a></li>
+            <li><a href="/cakes.html">Cakes</a></li>
+            <li><a href="/cookies.html">Cookies</a></li>
+            <li><a href="/lemonloaves.html">Lemon Loaves</a></li>
+            <li><a href="/sweetevents.html">Sweet Events</a></li>
+            <li><a href="/order.html">Order and Inquire</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="intro">
+            <img src="Images/Untitled design.png" alt="Sugar Bakez Logo">
+            <h1>Welcome to Sugar Bakez</h1>
+            <p>
+                Hey! I’m Farah and welcome to Sugar Bakez where every bite is crafted with love, passion, and lots of happiness! I am a small home-based bakery specializing in decadent variations of brownies, also offering cookies, cakes, and lemon loaves.
+            </p>
+            <p>
+                What started as a passion project to a full-time university student, has blossomed into a sweet venture dedicated to spreading joy one treat at a time. Baking has always been my love language—a way to connect, share, and bring a little sweetness into the lives of others. Each creation is made with the finest ingredients and a whole lot of care, ensuring that every product is not only delicious but made to make you smile. You’ll always find something to satisfy your sweet tooth with us.
+            </p>
+            <p>
+                Thank you for supporting my dream—I’m so excited to share my love of baking with you!
+            </p>
+            <p><strong>With love,<br>Farah</strong></p>
+        </div>
+
+        <div class="cta">
+            <h2>How can I sweeten your day?</h2>
+            <div class="buttons">
+                <div class="button-wrapper">
+                    <img src="Images/image39.jpg" alt="Sweet Treats">
+                    <a href="/sweettreats.html">Sweet Treats</a>
+                </div>
+                <div class="button-wrapper">
+                    <img src="Images/image31.jpg" alt="Sweet Events">
+                    <a href="/sweetevents.html">Sweet Events</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with &#128158; by The Three Stars | Sugar Bakez</p>
+    </footer>
+
+    <script>
+        // Toggle Mobile Menu
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.menu.mobile');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
